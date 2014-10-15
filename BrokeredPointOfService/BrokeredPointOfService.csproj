@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B848E7EC-DC59-4222-B4F2-41175B2189A8}</ProjectGuid>
+    <OutputType>winmdobj</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrokeredPointOfService</RootNamespace>
+    <AssemblyName>BrokeredPointOfService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <WindowsAppContainer>true</WindowsAppContainer>
+    <DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Point Of Service\SDK\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Windows" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrokeredNetfxExceptionFactory.cs" />
+    <Compile Include="BrokeredPosControlException.cs" />
+    <Compile Include="BrokeredNetfxException.cs" />
+    <Compile Include="BrokeredMsr.cs" />
+    <Compile Include="BrokeredPosCommon.cs" />
+    <Compile Include="BrokeredPosDevice.cs" />
+    <Compile Include="BrokeredPosLibraryException.cs" />
+    <Compile Include="BrokeredPosManagementException.cs" />
+    <Compile Include="BrokeredPosPrinter.cs" />
+    <Compile Include="BrokeredScanner.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="Msr.cs" />
+    <Compile Include="MsrErrorReporting.cs" />
+    <Compile Include="MsrTracks..cs" />
+    <Compile Include="PosCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosControlException.cs" />
+    <Compile Include="PosDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarCodeTextPosition.cs" />
+    <Compile Include="CharacterSetCapability.cs" />
+    <Compile Include="HealthCheckLevel.cs" />
+    <Compile Include="LineDirection.cs" />
+    <Compile Include="LineStyle.cs" />
+    <Compile Include="MapMode.cs" />
+    <Compile Include="PageModeDescriptors.cs" />
+    <Compile Include="PageModePrintControl.cs" />
+    <Compile Include="PageModePrintDirection.cs" />
+    <Compile Include="PosDeviceFactory.cs" />
+    <Compile Include="NetfxException.cs" />
+    <Compile Include="PosException.cs" />
+    <Compile Include="PosLibraryException.cs" />
+    <Compile Include="PosManagementException.cs" />
+    <Compile Include="PosPrinter.cs" />
+    <Compile Include="PrintColors.cs" />
+    <Compile Include="PrinterCartridgeNotify.cs" />
+    <Compile Include="PrinterCartridgeSensors.cs" />
+    <Compile Include="PrinterCartridgeStates.cs" />
+    <Compile Include="PrinterErrorLevel.cs" />
+    <Compile Include="PrinterLogoLocation.cs" />
+    <Compile Include="PrinterMarkFeeds.cs" />
+    <Compile Include="PrinterSide.cs" />
+    <Compile Include="PrinterStation.cs" />
+    <Compile Include="PrinterTransactionControl.cs" />
+    <Compile Include="PrintRotation.cs" />
+    <Compile Include="Rotation.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="Statistic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataEventArgs.cs" />
+    <Compile Include="DeviceErrorEventArgs.cs" />
+    <Compile Include="DeviceInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Version.cs" />
+    <Compile Include="DeviceChangedEventArgs.cs" />
+    <Compile Include="DirectIOData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectIOEventArgs.cs" />
+    <Compile Include="PosExplorer.cs" />
+    <Compile Include="StatusUpdateEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BarCodeSymbology.cs" />
+    <Compile Include="CompareFirmwareResult.cs" />
+    <Compile Include="ControlState.cs" />
+    <Compile Include="DeviceAuthenticationLevel.cs" />
+    <Compile Include="DeviceAuthenticationProtocol.cs" />
+    <Compile Include="DeviceCompatibilities.cs" />
+    <Compile Include="EncryptionAlgorithm.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="ErrorLocus.cs" />
+    <Compile Include="ErrorResponse.cs" />
+    <Compile Include="PowerNotification.cs" />
+    <Compile Include="PowerReporting.cs" />
+    <Compile Include="PowerState.cs" />
+    <Compile Include="StatisticCategories.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+      "$(WINDIR)\syswow64\windowspowershell\v1.0\powershell.exe" -noninteractive -noprofile -executionpolicy bypass "get-process | ? { $_.ProcessName -eq \"dllhost\"} | ? {($_.Modules | ?{$_.ModuleName -eq \"$(TargetFileName)\"}).count -gt 0} | stop-process"
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

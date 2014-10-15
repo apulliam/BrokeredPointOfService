@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="b1243734-8f91-41f9-8ba7-5874790ac4da" Publisher="CN=apulliam" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>ModernPosExplorer</DisplayName>
+    <PublisherDisplayName>apulliam</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ModernPosExplorer.App">
+      <m2:VisualElements DisplayName="Modern POS Explorer" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Windows 8 Modern App version of POS for .NET device explorer" ForegroundText="light" BackgroundColor="#464646">
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>clrhost.dll</Path>
+        <ActivatableClass ActivatableClassId="BrokeredPointOfService.PosExplorer" ThreadingModel="MTA">
+          <ActivatableClassAttribute Name="DesktopApplicationPath" Type="string" Value="%BrokeredPointOfService%" />
+        </ActivatableClass>
+        <ActivatableClass ActivatableClassId="BrokeredPointOfService.DeviceCompatibilities" ThreadingModel="MTA">
+          <ActivatableClassAttribute Name="DesktopApplicationPath" Type="string" Value="%BrokeredPointOfService%" />
+        </ActivatableClass>
+        <ActivatableClass ActivatableClassId="BrokeredPointOfService.EncryptionAlgorithm" ThreadingModel="MTA">
+          <ActivatableClassAttribute Name="DesktopApplicationPath" Type="string" Value="%BrokeredPointOfService%" />
+        </ActivatableClass>
+        <ActivatableClass ActivatableClassId="BrokeredPointOfService.HealthCheckLevel" ThreadingModel="MTA">
+          <ActivatableClassAttribute Name="DesktopApplicationPath" Type="string" Value="%BrokeredPointOfService%" />
+        </ActivatableClass>
+      </InProcessServer>
+    </Extension>
+  </Extensions>
+</Package>
